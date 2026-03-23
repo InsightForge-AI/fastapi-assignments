@@ -8,4 +8,4 @@ def root():
 
 @app.get("/hello")
 def hello():
-    return {"message": "Hello, Guruchandra!"}
+    return {"message": "Hello, World!"}
