@@ -12,7 +12,7 @@ app = FastAPI()
 @app.get("/")
 # URL -http://127.0.0.1:8000
 def root():
-    return {"message": "Welcome to FastAPI!,Day-2 of Learning FastAPI!!!!!!"}
+    return {"message": "Welcome to FastAPI!,Day-2 of Learning FastAPI!!!!!!!"}
 
 @app.get("/posts")
 # URL - http://127.0.0.1:8000/posts
