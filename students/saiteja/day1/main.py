@@ -7,5 +7,5 @@ def home():
     return {"message": "Welcome"}
 
 @app.get("/hello")
-def hello(name: str = "Guest"):
-    return {"message": f"Hello, {name}"}
+def hello():
+    return {"message": "Hello World"}
