@@ -9,9 +9,9 @@ def home():
 
 # New APIs
 @app.get("/greet")
-def greet(name: str):
-    return {"message": f"Hello {Dharmika}!"}
-
+def greet(name : str):
+    return {"Welcome": f"Hello {name}, Welcome to API!"}
+        
 @app.get("/add")
 def add(a: int, b: int):
     return {"result": a + b}
