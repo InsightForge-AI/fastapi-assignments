@@ -27,6 +27,8 @@ def add(a: int, b: int):
     return {"result": a + b}
 
 
+
+
 # 4️ POST API
 @app.post("/user")
 def create_user(user: User):
@@ -37,3 +39,6 @@ def create_user(user: User):
             "age": user.age
         }
     }
+
+    #pr practice change
+    
