@@ -38,8 +38,6 @@ async def signup_fun(su: signup):
         }
   except Exception as e:
         return {"error": str(e)}
-     
-
 
 
 # retrive users data
