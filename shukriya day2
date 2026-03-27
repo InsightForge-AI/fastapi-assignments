@@ -1,0 +1,13 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+# API 1: /greet?name=YourName
+@app.get("/greet")
+def greet(name: str):
+    return {"message": f"Hello, {name}!"}
+
+# API 2: /add?a=5&b=10
+@app.get("/add")
+def add(a: int, b: int):
+    return {"result": a + b}
