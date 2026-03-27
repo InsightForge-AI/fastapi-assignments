@@ -33,8 +33,6 @@ Sample input:
   "op": "add"
 }
 
-## 📷 Screenshots
-(Add Postman screenshots)
 
 ## 👨‍💻 Author
 Mohammad Muneeb Ali
