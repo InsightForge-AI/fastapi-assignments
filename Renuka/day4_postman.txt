@@ -1,0 +1,8 @@
+Postman Testing Completed
+
+Tested APIs:
+- GET /greet
+- GET /add
+- POST /user
+
+All APIs are working correctly.
