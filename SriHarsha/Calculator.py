@@ -9,7 +9,8 @@ app = FastAPI()
 # Root API
 @app.get("/Calculator")
 def read_root():
-    return {"message": "Welcome to the Calculator API!"}
+    return {"message": "Welcome to the Calculator API!"
+    "This API supports the following operations: add, subtract, multiply, divide, modulus, exponentiation, floor_division, negation, multiplication_table, factorial, fibonacci, gcd, lcm, square_root. To perform an operation, send a POST request to /Calculator/operation with a JSON body containing the operation and operands.   Example JSON body for addition: {\"operation\": \"add\", \"a\": 5, \"b\": 3}"}
 
 
 
