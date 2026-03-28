@@ -15,3 +15,4 @@
 - used post method for getting results in postman
 - wrote code like the code for get method with post method got null until I figured it out with help
 - Created a simple calculator app with many methods by pressing tab button after write elif hehe
+- Completed all given assignments 
