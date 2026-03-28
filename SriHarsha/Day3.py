@@ -10,12 +10,14 @@ class Person(BaseModel):
 # Root API
 @app.get("/")
 def read_root():
-    return {"API to get name and age"}
+    return {"message": "API to get name and age"}
 
+# POST API
 @app.post("/person/")
 async def create_person(person: Person) -> Person:
-    return Person(name=person.name, age=person.age)
+    return person
 
+# GET API
 @app.get("/person")
 async def read_item(name: str, age: int) -> Person:
-    return Person(name= "Sri Harsha", age= 25)
+    return Person(name=name, age=age)
