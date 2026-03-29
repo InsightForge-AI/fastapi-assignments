@@ -1,6 +1,0 @@
-fastapi
-uvicorn
-pandas
-requests
-python-multipart
-num2words
