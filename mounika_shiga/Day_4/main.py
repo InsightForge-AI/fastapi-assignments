@@ -24,7 +24,7 @@ def create_user(user: User):
         "age": user.age
     }
 
-# ✅ Day 4 extra API (status check)
+# Day 4 extra API (status check)
 @app.get("/status")
 def status():
     return {"message": "API is running successfully"}
