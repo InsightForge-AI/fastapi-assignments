@@ -17,3 +17,4 @@ def create_user(user: User):
     return {
         "message": f"User {user.name} is {user.age} years old"
     }
+
