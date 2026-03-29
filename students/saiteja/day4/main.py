@@ -3,20 +3,16 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+# Day 1
 @app.get("/")
 def home():
-    return {"message": "Welcome to my API"}
+    return {"message": "Welcome to FastAPI"}
 
 @app.get("/hello")
-def hello():
-    return {"message": "Hello Renuka"}
+def say_hello():
+    return {"message": "Hello World"}
 
-# Model for POST request
-class User(BaseModel):
-    name: str
-    age: int
-
-# Existing GET APIs
+# Day 2
 @app.get("/greet")
 def greet(name: str):
     return {"message": f"Hello {name}"}
@@ -25,10 +21,15 @@ def greet(name: str):
 def add(a: int, b: int):
     return {"result": a + b}
 
-# POST API
+# Day 3
+class User(BaseModel):
+    name: str
+    age: int
+
 @app.post("/user")
 def create_user(user: User):
     return {
-        "message": "User created successfully",
-        "data": user
+        "message": "User received successfully",
+        "name": user.name,
+        "age": user.age
     }
