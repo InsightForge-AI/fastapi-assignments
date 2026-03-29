@@ -3,10 +3,12 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-@app.get("/")
-def home():
-    return {"message": "Server is running"}
+# GET API
+@app.get("/greet")
+def greet(name: str):
+    return {"message": f"Hello, {name}!"}
 
+# POST API
 class User(BaseModel):
     name: str
     age: int
