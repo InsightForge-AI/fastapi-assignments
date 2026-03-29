@@ -5,7 +5,11 @@ app = FastAPI()
 @app.post("/createpost")
 def create_post(payload:dict=Body(...)):
     print(payload)
+    name = payload.get("name")
+    age = payload.get("age")
+
     return {
-    "message": "successfully created post",
-    "new_post": f"title: {payload['title']} content: {payload['content']}"
-           }
+        "message": "User created successfully",
+        "data": f"Name: {name}, Age: {age}"
+    }
+    
