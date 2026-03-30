@@ -13,8 +13,20 @@ df.head()
 analyzer = SentimentIntensityAnalyzer()
 
 # ✅ Generic function (DATA-INDEPENDENT)
+from fastapi import FastAPI
+from pydantic import BaseModel
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+app = FastAPI()
+
+analyzer = SentimentIntensityAnalyzer()
+
+# Request body schema
+class TextInput(BaseModel):
+    text: str
+
 def get_sentiment(text: str) -> str:
-    if not isinstance(text, str):   # handle non-text safely
+    if not isinstance(text, str):
         return "neutral"
     
     score = analyzer.polarity_scores(text)
@@ -27,7 +39,11 @@ def get_sentiment(text: str) -> str:
     else:
         return "neutral"
 
-print("START")
-sent = get_sentiment("Crust is not good.")
-print("RESULT:", sent)
-print("END")
+# POST API
+@app.post("/sentiment")
+async def sentiment_api(data: TextInput):
+    result = get_sentiment(data.text)
+    return {
+        "input": data.text,
+        "sentiment": result
+    }
