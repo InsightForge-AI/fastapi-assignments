@@ -33,3 +33,15 @@ def create_user(user: User):
         "name": user.name,
         "age": user.age
     }
+    @app.put("/user")
+def update_user(user: User):
+    return {
+        "message": f"User {user.name} updated successfully",
+        "age": user.age
+    }
+
+@app.delete("/user")
+def delete_user(name: str):
+    return {
+        "message": f"User {name} deleted successfully"
+    }
